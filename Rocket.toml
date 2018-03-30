@@ -1,0 +1,13 @@
+[global]
+port = 8080
+[development]
+address = "localhost"
+log = "normal"
+
+[staging]
+address = "0.0.0.0"
+log = "normal"
+
+[production]
+address = "0.0.0.0"
+log = "critical"

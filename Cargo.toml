@@ -1,0 +1,23 @@
+[package]
+name = "rust-app-engine"
+version = "0.1.0"
+authors = ["Graham Wihlidal <graham@wihlidal.ca>"]
+
+[dependencies]
+rocket = "0.3.6"
+rocket_codegen = "0.3.6"
+rocket-simpleauth = "0.4.0"
+courier = "0.3.1"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+handlebars = "0.32.0"
+
+[dependencies.rocket_contrib]
+version = "0.3.6"
+features = ["handlebars_templates"]
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+test = false
