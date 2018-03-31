@@ -37,6 +37,13 @@ fn not_found(req: &Request) -> Template {
     Template::render("error/404", &map)
 }
 
+#[error(500)]
+fn not_found(req: &Request) -> Template {
+    let mut map = std::collections::HashMap::new();
+    map.insert("path", req.uri().as_str());
+    Template::render("error/500", &map)
+}
+
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
         .mount("/", routes![index, get])
